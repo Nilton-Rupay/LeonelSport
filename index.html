@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nike Sneakers | Inicio</title>
+    <meta name="description" content="Descubre zapatillas Nike para running, lifestyle y entrenamiento. Explora modelos destacados y conoce nuestra colección.">
+    <link rel="preload" as="image" href="img/slide1.webp" media="(min-width: 769px)" fetchpriority="high">
+    <link rel="preload" as="image" href="img/slide1-mobile.webp" media="(max-width: 768px)" fetchpriority="high">
+    <style>
+        *{box-sizing:border-box;margin:0;padding:0}
+        body{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;background:#fff;color:#111;line-height:1.6;overflow-x:hidden}
+        a{text-decoration:none;color:inherit}
+        header{position:fixed;top:0;left:0;width:100%;background:rgba(17,17,17,.95);backdrop-filter:blur(10px);z-index:1000;box-shadow:0 2px 20px rgba(0,0,0,.3)}
+        .nav-container{max-width:1400px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;padding:15px 30px}
+        .logo{display:flex;align-items:center;gap:10px}
+        .logo img{height:34px;width:auto;object-fit:contain}
+        .nav-menu{display:flex;list-style:none;gap:35px}
+        .nav-menu a{color:#fff;font-size:.95rem;font-weight:500;letter-spacing:1px;text-transform:uppercase;position:relative;padding:5px 0}
+        .menu-toggle{display:none;flex-direction:column;align-items:center;justify-content:center;width:44px;height:44px;padding:0;border:0;background:transparent;cursor:pointer;gap:5px}
+        .menu-toggle span{width:25px;height:3px;background:#fff}
+        .hero-slider{position:relative;height:100vh;min-height:600px;overflow:hidden;margin-top:70px}
+        .slides{display:flex;height:100%}
+        .slide{min-width:100%;height:100%;position:relative;background-size:cover;background-position:center}
+        .slide:first-child{background-image:url('img/slide1.webp')}
+        .slide::before{content:'';position:absolute;inset:0;background:linear-gradient(to right,rgba(0,0,0,.7),rgba(0,0,0,.3) 50%,transparent)}
+        .slide-content{position:absolute;top:50%;left:8%;transform:translateY(-50%);color:#fff;max-width:550px;z-index:2}
+        .slide-content h1,.slide-content h2{font-size:3.5rem;font-weight:900;line-height:1.1;margin-bottom:20px;text-transform:uppercase;letter-spacing:-1px}
+        .slide-content p{font-size:1.2rem;margin-bottom:30px;opacity:.9}
+        .btn{display:inline-block;padding:14px 36px;background:#e41e2b;color:#fff;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;border:0;border-radius:2px}
+        .btn-outline{background:transparent;border:2px solid #fff;margin-left:15px}
+        @media(max-width:900px){
+            .nav-container{padding:15px 30px}
+            .nav-menu{position:fixed;top:70px;left:-100%;width:100%;height:calc(100vh - 70px);background:#111;flex-direction:column;align-items:center;justify-content:center;gap:40px;transition:left .4s}
+            .nav-menu.active{left:0}
+            .menu-toggle{display:flex}
+            .slide-content h1,.slide-content h2{font-size:2.2rem}
+        }
+        @media(max-width:768px){.slide:first-child{background-image:url('img/slide1-mobile.webp')}}
+        @media(max-width:600px){.slide-content{left:5%;max-width:90%}.slide-content h1,.slide-content h2{font-size:1.8rem}.btn-outline{margin-left:0;margin-top:10px;display:block;text-align:center}}
+    </style>
+    <link rel="preload" href="css/styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="css/styles.css"></noscript>
+</head>
+<body>
+    <!-- HEADER / NAV -->
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+            <img src="img/logo.webp" alt="" width="180" height="211">
+            <span>Leonel Sports</span>
+            </a>
+            <nav aria-label="Navegación principal">
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html" class="active">Inicio</a></li>
+                <li><a href="vision.html">Visión y Misión</a></li>
+                <li><a href="producto.html">Producto</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+            </nav>
+            <button type="button" class="menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- HERO SLIDER -->
+    <main>
+    <section class="hero-slider" aria-label="Promociones destacadas">
+        <div class="slides">
+            <div class="slide">
+                <div class="slide-content">
+                    <h1>Just Do It</h1>
+                    <p>Descubre la nueva colección de zapatillas Nike. Innovación, estilo y rendimiento en cada paso.</p>
+                    <a href="producto.html" class="btn">Ver Productos</a>
+                    <a href="vision.html" class="btn btn-outline">Conócenos</a>
+                </div>
+            </div>
+            <div class="slide" data-background="img/slide2.webp" data-background-mobile="img/slide2-mobile.webp">
+                <div class="slide-content">
+                    <h2>Air Max Revolution</h2>
+                    <p>Máximo confort y diseño icónico. La tecnología Air que cambió el juego para siempre.</p>
+                    <a href="producto.html" class="btn">Explorar</a>
+                </div>
+            </div>
+            <div class="slide" data-background="img/slide3.webp" data-background-mobile="img/slide3-mobile.webp">
+                <div class="slide-content">
+                    <h2>Rendimiento Elite</h2>
+                    <p>Diseñadas para atletas. Construidas para superarte a ti mismo cada día.</p>
+                    <a href="producto.html" class="btn">Comprar Ahora</a>
+                </div>
+            </div>
+        </div>
+        <div class="slider-arrows">
+            <button type="button" class="arrow prev" aria-label="Promoción anterior"><svg aria-hidden="true" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg></button>
+            <button type="button" class="arrow next" aria-label="Promoción siguiente"><svg aria-hidden="true" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></button>
+        </div>
+        <div class="slider-nav">
+            <button type="button" class="slider-dot active" aria-label="Mostrar promoción 1" aria-current="true"></button>
+            <button type="button" class="slider-dot" aria-label="Mostrar promoción 2"></button>
+            <button type="button" class="slider-dot" aria-label="Mostrar promoción 3"></button>
+        </div>
+    </section>
+
+    <!-- CAROUSEL BAR -->
+    <section class="carousel-section">
+        <div class="section-title">
+            <h2>Destacados</h2>
+        </div>
+        <div class="carousel-container">
+            <div class="carousel-track">
+                <div class="carousel-item">
+                    <img src="img/product1.webp" alt="Nike Air Force 1" width="600" height="900" loading="lazy" decoding="async">
+                    <div class="carousel-info">
+                        <p class="category">Lifestyle</p>
+                        <h3>Nike Air Force 1</h3>
+                        <p class="price">$110.00</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="img/product2.webp" alt="Nike Air Max" width="600" height="450" loading="lazy" decoding="async">
+                    <div class="carousel-info">
+                        <p class="category">Running</p>
+                        <h3>Nike Air Max 90</h3>
+                        <p class="price">$130.00</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="img/product3.webp" alt="Nike Dunk" width="600" height="750" loading="lazy" decoding="async">
+                    <div class="carousel-info">
+                        <p class="category">Basketball</p>
+                        <h3>Nike Dunk Low</h3>
+                        <p class="price">$100.00</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="img/product4.webp" alt="Nike Pegasus" width="600" height="400" loading="lazy" decoding="async">
+                    <div class="carousel-info">
+                        <p class="category">Running</p>
+                        <h3>Nike Pegasus 40</h3>
+                        <p class="price">$130.00</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="img/product5.webp" alt="Nike Blazer" width="600" height="400" loading="lazy" decoding="async">
+                    <div class="carousel-info">
+                        <p class="category">Lifestyle</p>
+                        <h3>Nike Blazer Mid</h3>
+                        <p class="price">$100.00</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="img/product6.webp" alt="Nike React" width="600" height="600" loading="lazy" decoding="async">
+                    <div class="carousel-info">
+                        <p class="category">Training</p>
+                        <h3>Nike React Infinity</h3>
+                        <p class="price">$160.00</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-controls">
+            <button type="button" class="carousel-btn prev" aria-label="Productos anteriores"><svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5m7 7-7-7 7-7"/></svg></button>
+            <button type="button" class="carousel-btn next" aria-label="Productos siguientes"><svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></button>
+        </div>
+    </section>
+
+    <!-- FEATURES / BODY WITH TRANSITIONS -->
+    <section class="features">
+        <div class="section-title">
+            <h2>Por qué Leonel Sports</h2>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon"><svg aria-hidden="true" viewBox="0 0 24 24" width="32" height="32" fill="currentColor"><path d="M13 2 3 14h7l-1 8 12-12h-7z"/></svg></div>
+                <h3>Innovación</h3>
+                <p>Tecnología de punta en cada par. Desde Air hasta React, empujamos los límites del rendimiento.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><svg aria-hidden="true" viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 15c2.4 0 4.2-.8 5.6-2.8l1.2-1.7a1.5 1.5 0 0 1 2.6.3l1.1 2.7c.5 1.2 1.7 2 3 2H20a1 1 0 0 1 1 1v2H3z"/><path d="M13 14h1m2 1h1"/></svg></div>
+                <h3>Comodidad</h3>
+                <p>Diseño ergonómico y materiales premium que se adaptan a tu pie durante todo el día.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><svg aria-hidden="true" viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="5"/><path d="m8.5 12-1 9 4.5-2.5 4.5 2.5-1-9"/></svg></div>
+                <h3>Rendimiento</h3>
+                <p>Confianza de los mejores atletas del mundo. Probadas en competencia al más alto nivel.</p>
+            </div>
+        </div>
+    </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col">
+                <h4>Leonel Sports</h4>
+                <p>Inspirando a atletas de todo el mundo desde 1964. Just Do It.</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/nike" aria-label="Nike en Facebook" target="_blank" rel="noopener noreferrer"><svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M13.5 21v-8.2h2.8l.4-3.2h-3.2V7.5c0-.9.3-1.5 1.6-1.5h1.7V3.1c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2.3H7.3v3.2h2.8V21z"/></svg></a>
+                    <a href="https://www.instagram.com/nike/" aria-label="Nike en Instagram" target="_blank" rel="noopener noreferrer"><svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="18" cy="6" r="1" fill="currentColor" stroke="none"/></svg></a>
+                    <a href="https://x.com/Nike" aria-label="Nike en X" target="_blank" rel="noopener noreferrer"><svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M18.9 2H22l-6.8 7.8L23.2 22h-6.3L12 13.9 4.9 22H1.8l7.3-8.4L.8 2h6.4l4.5 7.5zm-1.1 18h1.7L6.2 3.9H4.4z"/></svg></a>
+                    <a href="https://www.youtube.com/user/nike" aria-label="Nike en YouTube" target="_blank" rel="noopener noreferrer"><svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.6 15.6V8.4l6.2 3.6z"/></svg></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Navegación</h4>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="vision.html">Visión y Misión</a></li>
+                    <li><a href="producto.html">Productos</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Productos</h4>
+                <ul>
+                    <li><a href="producto.html">Running</a></li>
+                    <li><a href="producto.html">Basketball</a></li>
+                    <li><a href="producto.html">Lifestyle</a></li>
+                    <li><a href="producto.html">Training</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contacto</h4>
+                <ul>
+                    <li><svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg> info@Leonel Sports.com</li>
+                    <li><svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3h4l2 5-3 2a16 16 0 0 0 6 6l2-3 5 2v4a2 2 0 0 1-2 2A17 17 0 0 1 3 5a2 2 0 0 1 2-2z"/></svg> 989581083</li>
+                    <li><svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg> AV.24 de setiembre cruce los sauces, Carapongo</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Leonel Sports, Inc. Todos los derechos reservados. | Diseñado MaxSystem</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js" defer></script>
+</body>
+</html>
