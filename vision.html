@@ -6,31 +6,7 @@
     <title>Leonel Sport | Visión y Misión</title>
     <meta name="description" content="Conoce la visión, misión y valores que inspiran la innovación deportiva y el compromiso de Leonel Sport.">
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
-    <style>
-        *{box-sizing:border-box;margin:0;padding:0}
-        body{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;background:#fff;color:#111;line-height:1.6;overflow-x:hidden}
-        a{text-decoration:none;color:inherit}
-        header{position:fixed;top:0;left:0;width:100%;background:rgba(17,17,17,.95);backdrop-filter:blur(10px);z-index:1000;box-shadow:0 2px 20px rgba(0,0,0,.3)}
-        .nav-container{max-width:1400px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;padding:15px 30px}
-        .logo{display:flex;align-items:center;gap:10px}
-        .logo img{height:34px;width:auto;object-fit:contain}
-        .nav-menu{display:flex;list-style:none;gap:35px}
-        .nav-menu a{color:#fff;font-size:.95rem;font-weight:500;letter-spacing:1px;text-transform:uppercase;position:relative;padding:5px 0}
-        .menu-toggle{display:none;flex-direction:column;align-items:center;justify-content:center;width:44px;height:44px;padding:0;border:0;background:transparent;cursor:pointer;gap:5px}
-        .menu-toggle span{width:25px;height:3px;background:#fff}
-        .page-hero{height:40vh;min-height:300px;background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),url('img/about.webp') center/cover;display:flex;align-items:center;justify-content:center;margin-top:70px;color:#fff;text-align:center}
-        .page-hero h1{font-size:3rem;font-weight:900;text-transform:uppercase;letter-spacing:3px}
-        .store-gallery-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;margin-top:30px}
-        .store-gallery-grid img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:12px}
-        @media(max-width:900px){
-            .nav-menu{position:fixed;top:70px;left:-100%;width:100%;height:calc(100vh - 70px);background:#111;flex-direction:column;align-items:center;justify-content:center;gap:40px;transition:left .4s}
-            .nav-menu.active{left:0}
-            .menu-toggle{display:flex}
-        }
-        @media(max-width:600px){.page-hero h1{font-size:2rem}.store-gallery-grid{grid-template-columns:1fr;gap:18px}}
-    </style>
-    <link rel="preload" href="css/styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="css/styles.css"></noscript>
+    <link rel="stylesheet" href="css/styles.css">
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
 </head>
@@ -41,7 +17,7 @@
         <div class="nav-container">
             <a href="index.html" class="logo">
                 <img src="img/logo.webp" alt="Leonel Sport Logo">
-                <h1 style="color: white;"> Leonel Sport</h1>
+                <span>Leonel Sport</span>
             </a>
             <nav aria-label="Navegación principal">
             <ul class="nav-menu" id="nav-menu">
@@ -104,8 +80,8 @@
             </div>
         </div>
 
-        <h2 style="margin-top: 60px;">Nuestros Valores</h2>
-        <div class="features-grid" style="margin-top: 30px;">
+        <h2 class="values-title">Nuestros Valores</h2>
+        <div class="features-grid values-grid">
             <div class="feature-card">
                 <div class="feature-icon"><i class="fas fa-lightbulb"></i></div>
                 <h3>Innovación</h3>
@@ -128,11 +104,11 @@
         <h2 id="store-gallery-title">Conoce nuestra tienda</h2>
         <p>Un vistazo a nuestros productos y al espacio donde te atendemos.</p>
         <div class="store-gallery-grid">
-            <img src="img/tienda0.webp" alt="Vista de la tienda y su exhibición de productos deportivos" loading="lazy" decoding="async">
-            <img src="img/tienda1.webp" alt="Vista del interior de la tienda con calzado y accesorios deportivos" loading="lazy" decoding="async">
-            <img src="img/tienda2.webp" alt="Exhibición de productos deportivos en la tienda" loading="lazy" decoding="async">
-            <img src="img/tienda3.webp" alt="Variedad de calzado deportivo en los estantes de la tienda" loading="lazy" decoding="async">
-            <img src="img/tienda4.webp" alt="Interior de la tienda con sus productos" loading="lazy" decoding="async">
+            <img src="img/tienda0-800.webp" srcset="img/tienda0-480.webp 480w, img/tienda0-800.webp 800w" sizes="(max-width: 600px) calc(100vw - 60px), (max-width: 1160px) calc((100vw - 84px) / 2), 508px" alt="Vista de la tienda y su exhibición de productos deportivos" loading="lazy" decoding="async">
+            <img src="img/tienda1.webp" srcset="img/tienda1.webp 474w" sizes="(max-width: 600px) calc(100vw - 60px), (max-width: 1160px) calc((100vw - 84px) / 2), 508px" alt="Vista del interior de la tienda con calzado y accesorios deportivos" loading="lazy" decoding="async">
+            <img src="img/tienda2-800.webp" srcset="img/tienda2-480.webp 480w, img/tienda2-800.webp 800w" sizes="(max-width: 600px) calc(100vw - 60px), (max-width: 1160px) calc((100vw - 84px) / 2), 508px" alt="Exhibición de productos deportivos en la tienda" loading="lazy" decoding="async">
+            <img src="img/tienda3-800.webp" srcset="img/tienda3-480.webp 480w, img/tienda3-800.webp 800w" sizes="(max-width: 600px) calc(100vw - 60px), (max-width: 1160px) calc((100vw - 84px) / 2), 508px" alt="Variedad de calzado deportivo en los estantes de la tienda" loading="lazy" decoding="async">
+            <img src="img/tienda4-800.webp" srcset="img/tienda4-480.webp 480w, img/tienda4-800.webp 800w" sizes="(max-width: 600px) calc(100vw - 60px), (max-width: 1160px) calc((100vw - 84px) / 2), 508px" alt="Interior de la tienda con sus productos" loading="lazy" decoding="async">
         </div>
     </section>
     </main>
@@ -141,7 +117,7 @@
     <footer>
         <div class="footer-container">
             <div class="footer-col">
-                <h4></h4>
+                <h4>Leonel Sport</h4>
                 <p>Fundación 1994. Calidad, estilo y confianza para cada paso.</p>
                 <div class="social-links">
                     <a href="https://www.facebook.com/" aria-label="Leonel Sport en Facebook" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
@@ -171,7 +147,7 @@
             <div class="footer-col">
                 <h4>Contacto</h4>
                 <ul>
-                    <li><i class="fas fa-envelope"></i> info@Leonel Sports.com</li>
+                    <li><i class="fas fa-envelope"></i> <a href="mailto:info@LeonelSports.com">info@LeonelSports.com</a></li>
                     <li><i class="fas fa-building"></i> Fundación 1994</li>
                     <li><i class="fas fa-map-marker-alt"></i> AV.24 de setiembre cruce los sauces, Carapongo</li>
                 </ul>
