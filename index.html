@@ -7,40 +7,7 @@
     <meta name="description" content="Descubre la colección de Leonel Sport para running, lifestyle y entrenamiento. Explora modelos y conoce nuestra marca.">
     <link rel="preload" as="image" href="img/slide1.webp" media="(min-width: 769px)" fetchpriority="high">
     <link rel="preload" as="image" href="img/slide1-mobile.webp" media="(max-width: 768px)" fetchpriority="high">
-    <style>
-        *{box-sizing:border-box;margin:0;padding:0}
-        body{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;background:#fff;color:#111;line-height:1.6;overflow-x:hidden}
-        a{text-decoration:none;color:inherit}
-        header{position:fixed;top:0;left:0;width:100%;background:rgba(17,17,17,.95);backdrop-filter:blur(10px);z-index:1000;box-shadow:0 2px 20px rgba(0,0,0,.3)}
-        .nav-container{max-width:1400px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;padding:15px 30px}
-        .logo{display:flex;align-items:center;gap:10px}
-        .logo img{height:34px;width:auto;object-fit:contain}
-        .nav-menu{display:flex;list-style:none;gap:35px}
-        .nav-menu a{color:#fff;font-size:.95rem;font-weight:500;letter-spacing:1px;text-transform:uppercase;position:relative;padding:5px 0}
-        .menu-toggle{display:none;flex-direction:column;align-items:center;justify-content:center;width:44px;height:44px;padding:0;border:0;background:transparent;cursor:pointer;gap:5px}
-        .menu-toggle span{width:25px;height:3px;background:#fff}
-        .hero-slider{position:relative;height:100vh;min-height:600px;overflow:hidden;margin-top:70px}
-        .slides{display:flex;height:100%}
-        .slide{min-width:100%;height:100%;position:relative;background-size:cover;background-position:center}
-        .slide:first-child{background-image:url('img/slide1.webp')}
-        .slide::before{content:'';position:absolute;inset:0;background:linear-gradient(to right,rgba(0,0,0,.7),rgba(0,0,0,.3) 50%,transparent)}
-        .slide-content{position:absolute;top:50%;left:8%;transform:translateY(-50%);color:#fff;max-width:550px;z-index:2}
-        .slide-content h1,.slide-content h2{font-size:3.5rem;font-weight:900;line-height:1.1;margin-bottom:20px;text-transform:uppercase;letter-spacing:-1px}
-        .slide-content p{font-size:1.2rem;margin-bottom:30px;opacity:.9}
-        .btn{display:inline-block;padding:14px 36px;background:#e41e2b;color:#fff;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;border:0;border-radius:2px}
-        .btn-outline{background:transparent;border:2px solid #fff;margin-left:15px}
-        @media(max-width:900px){
-            .nav-container{padding:15px 30px}
-            .nav-menu{position:fixed;top:70px;left:-100%;width:100%;height:calc(100vh - 70px);background:#111;flex-direction:column;align-items:center;justify-content:center;gap:40px;transition:left .4s}
-            .nav-menu.active{left:0}
-            .menu-toggle{display:flex}
-            .slide-content h1,.slide-content h2{font-size:2.2rem}
-        }
-        @media(max-width:768px){.slide:first-child{background-image:url('img/slide1-mobile.webp')}}
-        @media(max-width:600px){.slide-content{left:5%;max-width:90%}.slide-content h1,.slide-content h2{font-size:1.8rem}.btn-outline{margin-left:0;margin-top:10px;display:block;text-align:center}}
-    </style>
-    <link rel="preload" href="css/styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="css/styles.css"></noscript>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <!-- HEADER / NAV -->
@@ -112,7 +79,7 @@
         <div class="carousel-container">
             <div class="carousel-track">
                 <div class="carousel-item">
-                    <img src="img/product1.webp" alt="Nike Air Force 1" width="600" height="900" loading="lazy" decoding="async">
+                    <img src="img/product1.webp" alt="Zapatilla Nike Air Force 1, vista lateral" width="600" height="900" loading="lazy" decoding="async">
                     <div class="carousel-info">
                         <p class="category">Lifestyle</p>
                         <h3>Nike Air Force 1</h3>
@@ -120,7 +87,7 @@
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="img/product2.webp" alt="Nike Air Max" width="600" height="450" loading="lazy" decoding="async">
+                    <img src="img/product2.webp" alt="Zapatilla Nike Air Max 90, vista lateral" width="600" height="450" loading="lazy" decoding="async">
                     <div class="carousel-info">
                         <p class="category">Running</p>
                         <h3>Nike Air Max 90</h3>
@@ -128,7 +95,7 @@
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="img/product3.webp" alt="Nike Dunk" width="600" height="750" loading="lazy" decoding="async">
+                    <img src="img/product3.webp" alt="Zapatilla Nike Dunk Low, vista lateral" width="600" height="750" loading="lazy" decoding="async">
                     <div class="carousel-info">
                         <p class="category">Basketball</p>
                         <h3>Nike Dunk Low</h3>
@@ -136,7 +103,7 @@
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="img/product4.webp" alt="Nike Pegasus" width="600" height="400" loading="lazy" decoding="async">
+                    <img src="img/product4.webp" alt="Zapatilla Nike Pegasus 40, vista lateral" width="600" height="400" loading="lazy" decoding="async">
                     <div class="carousel-info">
                         <p class="category">Running</p>
                         <h3>Nike Pegasus 40</h3>
@@ -144,7 +111,7 @@
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="img/product5.webp" alt="Nike Blazer" width="600" height="400" loading="lazy" decoding="async">
+                    <img src="img/product5.webp" alt="Zapatilla Nike Blazer Mid, vista lateral" width="600" height="400" loading="lazy" decoding="async">
                     <div class="carousel-info">
                         <p class="category">Lifestyle</p>
                         <h3>Nike Blazer Mid</h3>
@@ -152,7 +119,7 @@
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="img/product6.webp" alt="Nike React" width="600" height="600" loading="lazy" decoding="async">
+                    <img src="img/product6.webp" alt="Zapatilla Nike React Infinity, vista lateral" width="600" height="600" loading="lazy" decoding="async">
                     <div class="carousel-info">
                         <p class="category">Training</p>
                         <h3>Nike React Infinity</h3>
@@ -226,8 +193,8 @@
             <div class="footer-col">
                 <h4>Contacto</h4>
                 <ul>
-                    <li><svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg> info@Leonel Sports.com</li>
-                    <li><svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3h4l2 5-3 2a16 16 0 0 0 6 6l2-3 5 2v4a2 2 0 0 1-2 2A17 17 0 0 1 3 5a2 2 0 0 1 2-2z"/></svg> Fundación 1994</li>
+                    <li><svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg> <a href="mailto:info@LeonelSports.com">info@LeonelSports.com</a></li>
+                    <li><svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V5l7-3v19M12 9h7v12M8 7h1m-1 4h1m-1 4h1m7-3h1m-1 4h1"/></svg> Fundación 1994</li>
                     <li><svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg> AV.24 de setiembre cruce los sauces, Carapongo</li>
                 </ul>
             </div>
